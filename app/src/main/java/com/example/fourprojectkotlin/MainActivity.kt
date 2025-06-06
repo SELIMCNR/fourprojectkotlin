@@ -99,6 +99,7 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("isim1", sharedPreferences.getString("isim", ""))
                 startActivity(intent)
                 Snackbar.make(view, "İsim silindi!", Snackbar.LENGTH_LONG)
+
                     .setAction("Geri Al") {
                         sharedPreferences.edit().putString("isim", alinanVeri).apply()
                         binding.materialTextView.text = "Kaydedilen İsim = $alinanVeri"
